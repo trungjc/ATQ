@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/lightgallery.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700,500,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+		<title>Tax Calculator</title>
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<div class="main-container">
+				<div class="status-tab">
+					<div class="table-title">
+						<h2><span>[A]</span> Status</h2>
+					</div>
+					<div class="tab-container">
+						<div class="block-static">
+							<div class="main-row tab-row main-row-no-padding">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>1.</span><label>State marital status?</label>
+									</div>
+									<div class="tab-col-right">
+										<ul class="select-group">
+											<li>
+												<input id="single-checkbox" type="radio" name="status">
+												<label class="checkbox-label">Single</label>
+											</li>
+											<li>
+												<input id="married-checkbox" type="radio" name="status">
+												<label class="checkbox-label married-lbl">Married</label>
+											</li>
+											<li>
+												<input id="windowed-checkbox" type="radio" name="status">
+												<label class="checkbox-label windowed-lbl">Windowed</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>2.</span><label>Are you an employee?</label>
+									</div>
+									<div class="tab-col-right dropdown-parent">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+										<span id="status-dropdown-btn" class="dropdown-btn">Show<i class="fa fa-caret-down"></i></span>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div id="status-dropdown" class="block-dropdown">
+							<div class="tab-row employee-child-rows">
+								<div class="tab-row child-row child-row-border">
+									<div class="tab-col-left">
+										<span>[a]</span><label>Are you a proprietary director?</label>
+									</div>
+									<div class="tab-col-right">
+											<div class="onoffswitch">
+											    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+											    <label class="onoffswitch-label" for="myonoffswitch">
+											        <span class="onoffswitch-inner"></span>
+											        <span class="onoffswitch-switch"></span>
+											    </label>
+											</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[b]</span><label>Are you a controlling shareholder?</label>
+									</div>
+									<div class="tab-col-right">
+											<div class="onoffswitch">
+											    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+											    <label class="onoffswitch-label" for="myonoffswitch">
+											        <span class="onoffswitch-inner"></span>
+											        <span class="onoffswitch-switch"></span>
+											    </label>
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>3.</span><label>If married, do both spouses have income?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If married, is your spouse employed?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>4.</span><label>Do you have children at school?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span>Are you the principal carer for the children at school?<label></label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>5</span><label>What is your age range?</label>
+									</div>
+									<div class="tab-col-right">
+										<select class="input-field" name="age">
+											<option>65 yrs</option>
+											<option>65 yrs</option>
+											<option>65 yrs</option>
+										</select>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If married, what is your spouse's age range?</label>
+									</div>
+									<div class="tab-col-right">
+										<select class="input-field" name="age">
+											<option>65 yrs</option>
+											<option>65 yrs</option>
+											<option>65 yrs</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="income-allowances-tab">
+					<div class="table-title">
+						<h2><span>[B]</span> Income and Allowances</h2>
+					</div>
+					<div class="tab-container">
+						<div class="block-static">
+							<div class="main-row tab-row main-row-no-padding">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>6.</span><label>Your Income?</label>
+									</div>
+									<div class="tab-col-right">
+										<input class="input-field icome-txt" >
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row main-row-no-padding">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>7.</span><label>Your Occupation </label>
+									</div>
+									<div class="tab-col-right dropdown-parent">
+										<select class="input-field occupation-select" name="occupation">
+											<option>Architects employed by:</option>
+											<option>65 yrs</option>
+											<option>65 yrs</option>
+										</select>
+										<span id="income-allowances-tab-dropdown-btn" class="dropdown-btn">Show<i class="fa fa-caret-down"></i></span>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div  id="income-allowances-dropdown-btn" class="block-dropdown">
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>8.</span><label>Have you made a qualifying pension contribution?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If Yes - how much did you pay?</label>
+									</div>
+									<div class="tab-col-right">
+										<input type="text" class="input-field qualifying-pension-txt" name="qualifying-pension">
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>9.</span><label>If married, your spouse's income</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input class="input-field icome-txt" >
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>Are you the principal carer for the children at school?<label></label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>10.</span><label>Do you employ a carer for an incapacitated person?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If Yes - how much do you pay?</label>
+									</div>
+									<div class="tab-col-right">
+										<input class="input-field icome-txt" >
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="benefit-tab">
+					<div class="table-title">
+						<h2><span>[C]</span> Income and Allowances</h2><span id="benefit-dropdown-btn" class="dropdown-btn">Show<i class="fa fa-caret-down"></i></span>
+					</div>
+					<div class="tab-container">
+						<div id="benefit-dropdown" class="block-dropdown">
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row main-row-no-padding">
+									<div class="tab-col-left">
+										<span>12.</span><label>Do you have a company vehicle?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If Yes - what is the original market value of car?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="text" class="input-field">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row  tab-row main-row-no-padding">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>13.</span><label>What is the annual mileage(in KM) relating to business use?</label>
+									</div>
+									<div class="tab-col-right dropdown-parent">
+										<input type="text" class="input-field">
+										
+									</div>
+								</label>
+							</div>
+						
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>14.</span><label>Do you spend more than 70% of working time away from 
+										employer's business premises and have elected for 
+										reduced rate of BIK?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>15.</span><label>Do you make any payments to your employer for use of
+											the company car?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If yes - enter amount of annual payment.</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="text" class="input-field">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left loan-row">
+										<span>16.</span><label>Have you received a loan from your employer at a 
+										preferential interest rate?</label>
+									</div>
+									<div class="tab-col-right">
+										<ul class="load-select select-group">
+											<div class="no-loan">
+												<input id="noloan-checkbox" type="radio" name="loan">
+												<label class="checkbox-label"><span>No</span></label>
+											</div>
+											<li>
+												<input id="principal-checkbox" type="radio" name="loan">
+												<label class="checkbox-label principal-lbl">Principal<br>Private Residence</label>
+											</li>
+											<li>
+												<input id="other-checkbox" type="radio" name="loan">
+												<label class="checkbox-label other-lbl">Other<br>Loan</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>Balance of loan?</label>
+									</div>
+									<div class="tab-col-right">
+										<input type="text" class="input-field">
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[b]</span><label>Rate of interest in %</label>
+									</div>
+									<div class="tab-col-right">
+										<input type="text" class="input-field">
+									</div>
+								</div>
+							</div>
+							<div class="main-row tab-row">
+								<div class="tab-row parent-row">
+									<div class="tab-col-left">
+										<span>17.</span><label>Do you make any payments to your employer for use of
+											the company car?</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+										    <label class="onoffswitch-label" for="myonoffswitch">
+										        <span class="onoffswitch-inner"></span>
+										        <span class="onoffswitch-switch"></span>
+										    </label>
+										</div>
+									</div>
+								</div>
+								<div class="tab-row child-row">
+									<div class="tab-col-left">
+										<span>[a]</span><label>If yes - enter amount paid by your employer.</label>
+									</div>
+									<div class="tab-col-right">
+										<div class="onoffswitch">
+										    <input type="text" class="input-field">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="calculator">
+					<button class="calculator-button"><img src="images/calculator.png" alt="cal-icon">Calculate Tax</button>
+					<button class="clear-button"><img src="images/clear-btn.png" alt="clear-icon">Clear Form</button>
+				</div>
+				<footer class="tax-footer">
+			<p>
+				No responsibility is taken by Deloitte for any errors or for any loss, however occasioned, to any person by reliance on this calculator.
+				Note - All figures in Euros, all figures rounded up to nearest Euro.
+				It is assumed that the individual qualifies for pension relief. You may, due to the changes announced in the budget, need to check this with your pension adviser.
+			</p>
+		</footer>
+			</div>
+		</div>
+
+		
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript" src="js/website.js"></script>
+
+	</body>
+</html>
