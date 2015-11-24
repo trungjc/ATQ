@@ -1,0 +1,178 @@
+body{font-family: 'Roboto', sans-serif;font-size: 14px;}
+img{max-width:100%;display: block;}
+h4{font-size: 18px;font-weight: 400}
+ul{padding:0px;list-style-type: none;margin: 0px;}
+a{text-decoration: none;}
+select:-ms-expand{display: none;}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;padding-left: 10px;}
+input[type="text"]{padding-left: 10px;}
+
+select option:hover {
+    background-color: red;
+}
+
+/* Layout */
+.main-container{width:980px;margin: 0 auto;padding-left:20px;padding-right: 20px;}
+.page-wrapper{margin-top: 27px;}
+.page-content-wapper{padding-left: 17px;padding-right: 17px;}
+.col-main{float:left;}
+.block-col{float: left;width: 50%;}
+.pull-left,.tab-col-left,.tab-col-right{float:left;}
+.pull-right{float:right}
+.clearfix{clear:both;}
+.main-container:before,.main-container:after,.page-wrapper:before,.page-wrapper:after,.tab-row:before,.tab-row:after,.input-field-block-1:before,.input-field-block-1:after{content:"";display: table;}
+.main-container:after,.page-wrapper:after,.tab-row:after,.input-field-block-1:after{clear:both;}
+.tab-col-left{width: 60%;}
+.tab-col-right{width: 40%;}
+
+/*Tax Calculator page */
+.tab-col-left label{font-weight:400;}
+.tab-col-left span{font-weight: 500;}
+.select-group{margin-top: 9px;}
+.tab-container select,.tab-container input[type="text"]{margin-top: 10px;}
+.select-group input{display: none;}
+.select-group input[type="radio"]:checked + label{background-color: #92d400;color:#fff;}
+.select-group .married-lbl,.select-group .windowed-lbl{margin-left: -5px;}
+.select-group .no-loan{float: left;height: 50px;}
+.select-group .no-loan label{padding-top: 14px;padding-bottom: 15px;}
+.select-group li{display: inline-block;}
+.select-group label{border:1px solid #d4d4d4;padding: 10px 30px;color:#525252;font-size: 15px;cursor: pointer;text-align: center;text-transform: uppercase;display: block;}
+.load-select label{padding:5px 27px;font-weight: 400;}
+.select-group .principal-lbl{margin-left: -1px;}
+.select-group .other-lbl{margin-left: -5px;}
+.tab-col-left span,.tab-col-left label{color:#525252;font-size: 15px;}
+.main-row{border-bottom:1px solid #dedede;padding-bottom: 23px;}
+.main-row-no-padding{padding-bottom: 0px;}
+.parent-row{padding-top:11px;padding-bottom: 11px;}
+.parent-row .tab-col-left span{padding-left: 17px;}
+.child-row-border{border-bottom:1px solid #c5c5c5;}
+.child-row{background-color: #f7f7f7;padding-top:11px;padding-bottom: 11px;}
+.child-row .tab-col-left span{padding-left: 38px;}
+.tab-col-left span{padding-right: 8px;}
+.employee-child-rows{padding-bottom: 23px;border-bottom:1px solid #dedede;}
+.tab-col-left{padding: 19px 0px;}
+.dropdown-parent{position:relative;}
+.dropdown-btn{font-weight:400;cursor:pointer;position: absolute;top: 0px;right: 0px;font-weight: 400;font-size:20px;border: 0px;background-color: transparent;color: #022775 !important}
+.dropdown-btn i{padding-left: 10px;}
+.tab-container select.input-field{background: url(../images/tax-dropdown.png) no-repeat 94% center;}
+.tab-container .input-field{border:1px solid #cccccc;color:#525252;font-size: 15px;font-weight: 400;}
+.status-tab select{width: 170px;height: 40px;padding-left: 10px;}
+.income-allowances-tab .icome-txt{padding-left:10px;width: 126px;height: 36px;}
+.occupation-select{width: 80%;height: 40px;}
+.qualifying-pension-txt{height: 36px;width: 80%;}
+.benefit-tab .input-field{width: 200;height: 36px;}
+.benefit-tab .loan-row{padding-top: 24px;}
+.calculator{margin-top: 40px;margin-bottom: 65px;font-weight: }
+.calculator button{text-transform: uppercase;padding: 18px 32px;border: 0px;font-size: 17px;}
+.calculator-button{background-color: #92d400;color:#fff;margin-right: 13px;box-shadow: 0px 1px 1px #76c700;}
+.clear-button{background-color:#c0c0c0;color:#505050;box-shadow: 0px 1px 1px #a0a0a0;}
+.calculator img{display: inline-block;padding-right:5px;}
+.tax-footer{background-color: #f5f5f5;border:1px solid #e5e5e5;padding:20px 20px 10px 20px;}
+.tax-footer p{font-size: 13px;color: #666666;font-size: 400;margin:0px;line-height: 31px;}
+.table-title{position: relative;}
+.table-title h2{font-size: 24px;color:#002776;border-bottom: 1px solid #c9c9c9;margin-bottom: 0px;padding-bottom: 20px;font-weight: 700;}
+.table-title span{color: #999999;font-weight: 500;padding-right: 10px;}
+.status-tab,.income-allowances-tab{margin-bottom: 45px;}
+ .switch {
+      position: relative;
+      display: block;
+      vertical-align: top;
+      width: 100px;
+      height: 30px;
+      padding: 3px;
+      margin-top:12px;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+      border-radius: 18px;
+      box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+    .switch-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .switch-label {
+      position: relative;
+      display: block;
+      height: inherit;
+      font-size: 10px;
+      text-transform: uppercase;
+      background: #d1d1d1;
+      border-radius: inherit;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    }
+    .switch-label:before, .switch-label:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -.5em;
+      line-height: 1;
+      -webkit-transition: inherit;
+      -moz-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit;
+    }
+    .switch-label:before {
+      content: attr(data-off);
+      right: 11px;
+      color: #666666;
+      font-size:12px;
+      font-weight: 400;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    }
+    .switch-label:after {
+      content: attr(data-on);
+      left: 11px;
+      font-weight: 400;
+      font-size:12px;
+      color: #FFFFFF;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+    }
+    .switch-input:checked ~ .switch-label {
+      background: #002672;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    .switch-input:checked ~ .switch-label:before {
+      opacity: 0;
+    }
+    .switch-input:checked ~ .switch-label:after {
+      opacity: 1;
+    }
+    .switch-handle {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+      background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+      border-radius: 100%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .switch-handle:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -6px 0 0 -6px;
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+      border-radius: 6px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+    }
+    .switch-input:checked ~ .switch-handle {
+      left: 74px;
+      box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    /* Transition
+        ========================== */
+    .switch-label, .switch-handle {
+      transition: All 0.3s ease;
+      -webkit-transition: All 0.3s ease;
+      -moz-transition: All 0.3s ease;
+      -o-transition: All 0.3s ease;
+    }
