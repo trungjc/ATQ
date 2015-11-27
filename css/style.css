@@ -5,29 +5,32 @@ ul{padding:0px;list-style-type: none;margin: 0px;}
 a{text-decoration: none;}
 select:-ms-expand{display: none;}
 select{-webkit-appearance:none;-moz-appearance:none;appearance:none;padding-left: 10px;}
+select:disabled{opacity: 0.3;border-color: rgb(11, 3, 3)}
 input[type="text"]{padding-left: 10px;}
 
 /* Layout */
 .main-container,.container{width:980px;margin: 0 auto;padding-left:20px;padding-right: 20px;}
 .page-wrapper{padding-top: 27px;}
-.col-main{}
 .block-col{float: left;width: 50%;}
 .pull-left,.tab-col-left,.tab-col-right{float:left;}
 .pull-right{float:right}
 .clearfix{clear:both;}
-.main-container:before,.main-container:after,.page-wrapper:before,.page-wrapper:after,.tab-row:before,.tab-row:after{content:"";display: table;}
-.main-container:after,.page-wrapper:after,.tab-row:after,{clear:both;}
+.main-container:before,.main-container:after,.page-wrapper:before,.page-wrapper:after,.tab-row:before,.tab-row:after,.input-field-block-1:before,.input-field-block-1:after{content:"";display: table;}
+.main-container:after,.page-wrapper:after,.tab-row:after,.input-field-block-1:after{clear:both;}
 .tab-col-left{width: 60%;}
 .tab-col-right{width: 40%;}
+.content-page{min-height: 945px;}
 
 /* Page Banner */
 .page-header,.page-header .banner{position: relative;}
 .page-header .banner-text-container{position: absolute;top:0px;bottom: 0px;left: 0px;right: 0px;margin: auto;height: 59%;}
 .page-header .banner img{display: block;width:100%;}
 .page-header .banner .banner-text p{font-size: 54px;font-weight: 100;color:#ffffff;text-align: center;}
+.social-share{float:right;margin-top: 17px;}
+.social-share a{display: inline-block;margin-right: 10px;}
 
 /* Main Navigation */
-.main-nav{background-color:#def3ee;opacity:0.8;position: absolute;top:0;width: 100%;}
+.main-nav{background-color:#def3ee;opacity:0.8;position: absolute;top:0;width: 100%;z-index: 9999;}
 .main-nav .logo{float:left;margin:13px 0px; }
 .main-nav .logo a{font-size: 31px;color:#496797;text-decoration: none;};
 .main-nav .logo strong{font-weight: 700;}
@@ -50,23 +53,20 @@ input[type="text"]{padding-left: 10px;}
 .check-step select{background: url(../images/dropdown.png) no-repeat 94% center;}
 .tabs-container{height: 570px;background-color: #fff;border-radius: 7px;padding-bottom: 30px;box-shadow: 0px 0px 3px -1px #ddd}
 .step-container .tab-control{margin-left: 20px;}
-.step-container .tab-control li{display: inline-block;cursor: pointer;}
+.step-container .tab-control li,.step-content .step-change .step-label{display: inline-block;cursor: pointer;}
 .step-container .tab-control li span{padding: 7px 26px;background-color: #efefef;color:#35303a;font-weight: 300;font-size: 16px;display: block;border-radius: 7px 7px 0px 0px;}
-.step-container .tab-control li.active span,.step-container .tab-control li span:focus{background-color: #2169a0;color:#fff;}
+.step-container .tab-control li.active span,.step-container .tab-control li span:hover{background-color: #2169a0;color:#fff;}
 .step-container .step-content h3{color:#35303a;font-weight: 400;font-size: 28px;text-align: center;padding-top:30px;margin-top: 0px;}
-.step-container .step-content{display: none;}
-.step-container .active{display: block;}
-.step-pagination{text-align: center;}
-.step-container .step-pagination .step-number{margin-right:23px;font-weight:400;font-size:15px;color:#fff;display: inline-block;text-align: center;width: 19px;height: 19px;padding: 4px;border-radius: 50%;background-color: #2169a0;display: inline-block;}
-.step-1 .step-pagination .step-number{margin-right:23px;}
-.step-1 .step-2-pagination,.step-2  .step-1-pagination{opacity: 0.5}
-.step-2 .step-pagination .step-number{margin-right:7px;}
-.step-container .step-pagination .step-name{font-weight: 400;font-size: 18px;color:#35303a;display: inline-block;}
-.step-1 .step-1-pagination{margin-right: 48px;}
-.step-2{display: none;}
-.step-2 .step-1-pagination{margin-right: 15px;}
+.step-container .step-content,.step-content .step-form{display: none;}
+.step-container .active,.step-content .current-step{display: block;}
+.step-change .step-label{opacity: 0.5;}
+.step-change .current-step{opacity: 1;}
+.step-container .step-change{text-align: center;}
+.step-container .step-change .step-number{margin-right:7px;font-weight:400;font-size:15px;color:#fff;display: inline-block;text-align: center;width: 19px;height: 19px;padding: 4px;border-radius: 50%;background-color: #2169a0;display: inline-block;}
+.step-container .step-change .step-name{font-weight: 400;font-size: 18px;color:#35303a;display: inline-block;}
+.step-change .step-label:first-child{margin-right: 60px;}
 .step-container .input-field{padding: 0px 40px;margin-top: 28px;}
-.step-2  .input-field{margin-bottom: 110px;}
+.step-2 .input-field{margin-bottom: 21px;}
 .step-container .input-group{margin-bottom: 20px;}
 .step-container .input-group label{display: block;color:#727272;font-size: 16px;font-weight: 400;margin-bottom: 10px;}
 .step-container .input-field-block-2 .input-group + .input-group {margin-top: 19px;}
@@ -96,8 +96,12 @@ input[type="text"]{padding-left: 10px;}
 .service-block .service-short-des a{color:#375c9a;font-size: 14px;}
 .advertisement label{margin-bottom: 27px;}
 
+
 /*Tax Calculator page */
+.tab-col-left label{font-weight:400;}
+.tab-col-left span{font-weight: 500;}
 .select-group{margin-top: 9px;}
+.tab-container select,.tab-container input[type="text"]{margin-top: 10px;}
 .select-group input{display: none;}
 .select-group input[type="radio"]:checked + label{background-color: #92d400;color:#fff;}
 .select-group .married-lbl,.select-group .windowed-lbl{margin-left: -5px;}
@@ -105,22 +109,25 @@ input[type="text"]{padding-left: 10px;}
 .select-group .no-loan label{padding-top: 14px;padding-bottom: 15px;}
 .select-group li{display: inline-block;}
 .select-group label{border:1px solid #d4d4d4;padding: 10px 30px;color:#525252;font-size: 15px;cursor: pointer;text-align: center;text-transform: uppercase;display: block;}
-.load-select label{padding:5px 27px}
+.load-select label{padding:5px 27px;font-weight: 400;}
 .select-group .principal-lbl{margin-left: -1px;}
 .select-group .other-lbl{margin-left: -5px;}
+.block-static{position: relative;}
 .tab-col-left span,.tab-col-left label{color:#525252;font-size: 15px;}
 .main-row{border-bottom:1px solid #dedede;padding-bottom: 23px;}
 .main-row-no-padding{padding-bottom: 0px;}
-.parent-row{padding-top:11px;padding-bottom: 11px;}
+.parent-row{padding-top:3px;padding-bottom: 2px;}
 .parent-row .tab-col-left span{padding-left: 17px;}
 .child-row-border{border-bottom:1px solid #c5c5c5;}
-.child-row{background-color: #f7f7f7;padding-top:11px;padding-bottom: 11px;}
+.chosen-container{display: table !important;width: 205px !important}
+.chosen-container-single{padding-top: 7px;}
+.child-row{background-color: #f7f7f7;padding-top:2px;padding-bottom: 3px;}
 .child-row .tab-col-left span{padding-left: 38px;}
 .tab-col-left span{padding-right: 8px;}
 .employee-child-rows{padding-bottom: 23px;border-bottom:1px solid #dedede;}
-.tab-col-left{padding: 9px 0px;}
+.tab-col-left{padding: 19px 0px;}
 .dropdown-parent{position:relative;}
-.dropdown-btn{cursor:pointer;position: absolute;top: 0px;right: 0px;font-weight: 400;font-size:20px;border: 0px;background-color: transparent;color: #022775 !important}
+.dropdown-btn{font-weight:400;cursor:pointer;position: absolute;top: 0px;right: 0px;font-weight: 400;font-size:20px;border: 0px;background-color: transparent;color: #022775 !important}
 .dropdown-btn i{padding-left: 10px;}
 .tab-container select.input-field{background: url(../images/tax-dropdown.png) no-repeat 94% center;}
 .tab-container .input-field{border:1px solid #cccccc;color:#525252;font-size: 15px;font-weight: 400;}
@@ -130,63 +137,129 @@ input[type="text"]{padding-left: 10px;}
 .qualifying-pension-txt{height: 36px;width: 80%;}
 .benefit-tab .input-field{width: 200;height: 36px;}
 .benefit-tab .loan-row{padding-top: 24px;}
-.calculator{margin-top: 40px;margin-bottom: 65px;}
+.calculator{margin-top: 40px;margin-bottom: 65px;font-weight: }
 .calculator button{text-transform: uppercase;padding: 18px 32px;border: 0px;font-size: 17px;}
-.calculator-button{background-color: #92d400;color:#fff;margin-right: 13px;}
-.clear-button{background-color:#c0c0c0;color:#505050}
+.calculator-button{background-color: #92d400;color:#fff;margin-right: 13px;box-shadow: 0px 4px 0px #76c700;}
+.clear-button{background-color:#c0c0c0;color:#505050;box-shadow: 0px 4px 0px #a0a0a0;}
 .calculator img{display: inline-block;padding-right:5px;}
-.tax-footer{background-color: #f5f5f5;border:1px solid #e5e5e5;}
-.tax-footer p{font-size: 13px;color: #666666}
+.tax-footer{background-color: #f5f5f5;border:1px solid #e5e5e5;padding:20px 20px 10px 20px;}
+.tax-footer p{font-size: 13px;color: #666666;font-size: 400;margin:0px;line-height: 31px;}
 .table-title{position: relative;}
-.table-title h2{font-size: 24px;color:#002776;border-bottom: 1px solid #c9c9c9;margin-bottom: 0px;padding-bottom: 20px;}
-.table-title span{color: #999999}
+.table-title h2{font-size: 24px;color:#002776;border-bottom: 1px solid #c9c9c9;margin-bottom: 0px;padding-bottom: 20px;font-weight: 700;}
+.table-title span{color: #999999;font-weight: 500;padding-right: 10px;}
 .status-tab,.income-allowances-tab{margin-bottom: 45px;}
-.onoffswitch{
-        position: relative; width: 82px;
-        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+#status-dropdown,#income-allowances-dropdown,#benefit-dropdown{display: none;}
+#income-allowances-tab-dropdown-btn,#status-dropdown-btn{top:100%;right: 11px;font-weight: 500!important;z-index: 999;}
+ .switch {
+      position: relative;
+      display: block;
+      vertical-align: top;
+      width: 100px;
+      height: 30px;
+      padding: 3px;
+      margin-top:12px;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+      border-radius: 18px;
+      box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
     }
-    .onoffswitch-checkbox {
-        display: none; 
+    .switch-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
-    .onoffswitch-label {
-        display: block; overflow: hidden; cursor: pointer;
-        border: 2px solid #999999; border-radius: 20px;
+    .switch-label {
+      position: relative;
+      display: block;
+      height: inherit;
+      font-size: 10px;
+      text-transform: uppercase;
+      background: #d1d1d1;
+      border-radius: inherit;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
     }
-    .onoffswitch-inner {
-        display: block; width: 200%; margin-left: -100%;
-        transition: margin 0.3s ease-in 0s;
+    .switch-label:before, .switch-label:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -.5em;
+      line-height: 1;
+      -webkit-transition: inherit;
+      -moz-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit;
     }
-    .onoffswitch-inner:before, .onoffswitch-inner:after {
-        display: block; float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
-        font-size: 12px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-        box-sizing: border-box;
+    .switch-label:before {
+      content: attr(data-off);
+      right: 11px;
+      color: #666666;
+      font-size:12px;
+      font-weight: 400;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5);
     }
-    .onoffswitch-inner:before {
-        content: "YES";
-        padding-left: 10px;
-        background-color: #002776; color: #FFFFFF;
+    .switch-label:after {
+      content: attr(data-on);
+      left: 11px;
+      font-weight: 400;
+      font-size:12px;
+      color: #FFFFFF;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      opacity: 0;
     }
-    .onoffswitch-inner:after {
-        content: "NO";
-        padding-right: 10px;
-        background-color: #D0D0D0; color: #666666;
-        text-align: right;
+    .switch-input:checked ~ .switch-label {
+      background: #002672;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
     }
-    .onoffswitch-switch {
-        display: block; width: 19px; margin: 6.5px;
-        background: #FFFFFF;
-        position: absolute; top: -6px; bottom: 0;
-        right: 37px;
-        background: url("../images/toggle-btn.png") no-repeat;
-        width: 35px;
-		height: 35px;
-        transition: all 0.3s ease-in 0s; 
+    .switch-input:checked ~ .switch-label:before {
+      opacity: 0;
     }
-    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-        margin-left: 0;
+    .switch-input:checked ~ .switch-label:after {
+      opacity: 1;
     }
-    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-        right: 0px; 
+    .switch-input:disabled ~ .switch-label{
+        opacity: 0.3;
+     }
+    .switch-handle {
+      -webkit-pointer-events:none;
+      -moz-pointer-events: none;
+      pointer-events: none;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+      background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+      border-radius: 100%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .switch-handle:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -6px 0 0 -6px;
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+      border-radius: 6px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+    }
+    .switch-input:checked ~ .switch-handle {
+      left: 74px;
+      box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    /* Transition
+        ========================== */
+    .switch-label, .switch-handle {
+      transition: All 0.3s ease;
+      -webkit-transition: All 0.3s ease;
+      -moz-transition: All 0.3s ease;
+      -o-transition: All 0.3s ease;
+    }
+  right: 0px; 
     }
 
 .clearfix {
@@ -201,6 +274,7 @@ input[type="text"]{padding-left: 10px;}
     line-height: 0;
     visibility: hidden;
 }
+
 .bg-gray {
 	background-color:#f7f7f7;
 }
@@ -212,6 +286,8 @@ input[type="text"]{padding-left: 10px;}
 	background-color:#efefef;
 	border-bottom: 1px solid #e5e5e5;
 }
+.content-page .page-wrapper{background-color:#f7f7f7;border: 0px;}
+.tax-page .page-wrapper {background-color: #fff;}
 .col-main .main-container {
 	position: relative;
 }
@@ -231,6 +307,26 @@ input[type="text"]{padding-left: 10px;}
 .footer-header p {
 	margin-top:0;
 }
+#benefit-dropdown-btn span{padding:0px;color:#022775;}
+.feedback-button{
+position: fixed;
+top: 32%;
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg); 
+transform: rotate(-90deg);
+-webkit-transform-origin: 100% 100%;
+-moz-transform-origin: 100% 100%;
+transform-origin: 100% 100%;
+background-color: rgb(92, 121, 171);
+border: 0px none;
+color: rgb(255, 255, 255);
+font-size: 20px;
+font-weight: 400;
+padding: 7px 29px;
+border-radius: 4px 4px 0px 0px;
+right:0px;
+z-index: 999;
+}
 /* Footer */
 .footer-container .footer-header{padding: 30px 0 88px 0;}
 .footer-container .footer-header p{font-weight: 300;font-size: 25px;color:#767279;text-align: center;}
@@ -243,3 +339,21 @@ input[type="text"]{padding-left: 10px;}
 .footer-bottom .contact p,.footer-bottom .contact a,.footer-bottom .contact address{font-weight: 400;font-size: 14px;font-style: normal;color:#525252;}
 .join-btn-container{position: absolute;bottom: 20%;left: 0px;right: 0px;}
 .footer-container .footer-bottom .join-btn{color:#fff;font-weight:300;display:block;margin: 0 auto;font-size:21px;border-radius: 4px;background-color: rgb(132, 222, 214);border: 1px solid rgb(132, 222, 214);padding: 11px 39px;box-shadow: 0px 1px 7px 0px #2C2A2A;}
+.age-checkbox{margin-top: 22px;}
+/*Validate Form*/
+.validate-failed{
+  border-color: red !important;
+  box-shadow: 0px 0px 2px 0px rgb(225, 96, 96);
+}
+.messenge{
+text-align: center;
+color: rgb(252, 250, 250);
+padding: 8px;
+margin-bottom: 31px;
+padding-bottom: 12px;
+font-weight: 400;
+font-size: 15px;
+background-color: rgb(243, 137, 137);
+opacity: 0;
+}
+.money-input input{box-sizing:border-box;padding-left:10px !important;}
